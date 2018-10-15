@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Me</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_photo">Select Photo</string>
+    <string name="edit_desc">Description...</string>
+    <string name="dialog_date_ok_button">Ok</string>
+    <string name="date_picker_title">Entry Date</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

@@ -1,0 +1,109 @@
+TODO 
+====
+	[ ] Find / run a simple example of StaggeredGridLayout	
+
+Links
+=====
+
+	Layouts w/ Different Cell Widths
+	https://stackoverflow.com/questions/36514887/layoutmanager-for-recyclerview-grid-with-different-cell-width
+
+	SQLLite Unit Testing
+	https://thedeveloperworldisyours.com/android/android-sqlite-test
+
+7/1/2018
+========
+
+	Copied the Data Access Layer from CriminalIntent - and re-factored it to better suit my "Me" app.
+	I Basically removed a bunch of stuff - but added a "type" indicator to determine what should be displayed - text, photo, or header.
+			
+	Created a Unit Test to test the SQLLite stuff by following this :
+		https://thedeveloperworldisyours.com/android/android-sqlite-test
+					
+7/13/2018
+=========
+	
+	Constraint layouts were driving me crazy. The secret is to NOT always add top AND bottom constraints to Views.
+	It'll pull/stretch them haphazardly.
+
+	My sole TextView was gaining focus on Activity startup. This helped fixing that problem :
+	
+		https://stackoverflow.com/questions/1555109/stop-edittext-from-gaining-focus-at-activity-startup
+		
+	Still need to know how to "leave" the TextView after explicitly clicking on it.
+
+		
+7/18/2018
+=========
+
+	Refactored the application. Not everything needs to be Fragments. In fact it just complicates things if it's not going to be re-used.
+
+	Can now select photos from Gallery and/or Camera. These links helped:
+
+		https://developer.android.com/training/camera/photobasics
+		https://demonuts.com/pick-image-gallery-camera-android/
+
+	Simplified the DatePickerDialog. These links helped:
+
+		https://www.journaldev.com/9976/android-date-time-picker-dialog
+		
+7/20/2018
+=========
+
+		Where file directories point ....
+
+			getFilesDir().getAbsolutePath() => /data/user/0/com.scottsjewels.android.me/files
+		
+			Environment.getDataDirectory().getAbsolutePath() => /data
+			
+		Creating a new Directory(s) ....
+		
+			File myDir = new File ( directory_path );
+			boolean isSuccess = myDir.mkdirs();
+			
+		Directory / File exists ...
+		
+			File myDir = new File ( directory_path );
+			myDir.exists();
+			
+		
+		
+		A FileProvider grants access to another Application to write to your Application's location.
+
+
+
+
+		
+
+	TODO: 	
+	
+	
+	
+		Gallery having problems writting to INTERNAL_STORAGE. Can write fine to external storage.
+	
+	
+Q&A
+===	
+	1) What is the difference between INTERNAL / EXTERNAL storage. Specifically, does one require a SD Card - or does it mean external to the application?
+	
+		EXTERNAL storage is just that - an external or mounted SD Card. It may not be available on a Device.
+		
+		What is External Storage?
+		https://developer.android.com/guide/topics/data/data-storage#filesExternal
+		
+		How to check if External Storage Exists - and write to it.
+		https://developer.android.com/training/data-storage/files#WriteExternalStorage
+		
+		
+		Why don't captured images fill entire ImageView - are they poor quality?
+
+		Allow user to specify file name ( check for duplicates )?
+
+		Move strings to resources
+
+		Add logging.
+
+
+
+
+		

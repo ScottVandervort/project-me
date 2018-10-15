@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    {{#if isDevelopment}}    
+    <link rel="stylesheet" type="text/css" href="/bower_components/cropperjs/dist/cropper.css">              
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">    
+    {{else}}
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/0.7.2/cropper.min.css">      
+    <link rel="stylesheet" type="text/css" href="/stylesheets/me.min.css">     
+    {{/if}}
+  </head>
+  <body>
+    {{{body}}}
+  </body>
+
+  {{#if isDevelopment}}
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="/bower_components/angular-route/angular-route.js"></script>
+  <script src="/bower_components/ng-file-upload/ng-file-upload-shim.js"></script>
+  <script src="/bower_components/ng-file-upload/ng-file-upload.js"></script>         
+  <script src='/javascripts/app.js'></script>
+  <script src='/javascripts/directives/googleMap.js'></script>
+  <script src='/javascripts/directives/imageEditor.js'></script>
+  <script src='/javascripts/services/entryService.js'></script>
+  <script src='/javascripts/services/searchService.js'></script>
+  <script src='/javascripts/controllers/imageEntryController.js'></script>
+  <script src='/javascripts/controllers/journalEntryController.js'></script>
+  <script src='/javascripts/controllers/locationEntryController.js'></script>
+  <script src='/javascripts/controllers/homeController.js'></script>
+  <script src='/javascripts/controllers/navigationController.js'></script>                            
+  <script src='/bower_components/cropperjs/dist/cropper.js'></script>
+  <script src='/bower_components/blueimp-canvas-to-blob/js/canvas-to-blob.js'></script>      
+  <script src="https://maps.googleapis.com/maps/api/js?key={{googleApiKey}}&libraries=places"></script>
+  {{else}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-sanitize.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.0.4/ng-file-upload-shim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.0.4/ng-file-upload.min.js"></script>
+  <script src="/javascripts/me.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/0.7.2/cropper.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.6.0/js/canvas-to-blob.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key={{googleApiKey}}&libraries=places"></script>  
+  {{/if}}  
+</html>

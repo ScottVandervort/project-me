@@ -1,0 +1,14 @@
+<div ng-app="me">
+
+    <div ng-controller="navigationController">  
+        <a ng-click="reset()" href="#/">Home</a>
+        <input ng-model="searchCriteria" ng-model-options="{ debounce: 500 }" type="search" placeholder="Search for entries ..."></input>
+        <!-- <a ng-selected="" ng-href="#/create/\{{selectedEntryType.id}}">Create</a>-->
+        <select ng-model="selectedEntryType" ng-change="go()" ng-options="entryType as entryType.text for entryType in entryTypes">
+            <option disabled value=''>Create a entry ...</option>            
+        </select>
+    </div>
+    
+    <div ng-view></div>
+
+</div>

@@ -1,0 +1,6 @@
+!.gitignore\
+
+
+/JournalTests/obj/**
+/JournalToJSON/obj/**
+JournalScrapper.*.suo

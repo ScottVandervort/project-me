@@ -1,0 +1,7 @@
+<h2>{{entryData._id?'Update':'Create'}} Journal</h2>
+<form name="journalForm" ng-submit="submitForm()" ng-init="init()">
+    <fieldset>    
+        <div ng-include="'views/partials/commonEntry.html'"></div>   
+    </fieldset>
+    <button type="submit">Submit</button>    
+</form>

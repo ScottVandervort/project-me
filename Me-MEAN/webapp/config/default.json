@@ -1,0 +1,20 @@
+{
+	"images" : {
+		"archiveDimensions" : { "width" : 640, "height" : 480 },
+		"archiveFormat" : "jpg",
+		"archiveCompressionFormat" : "JPEG",		
+		"archiveLocation" : "public/images/",
+		"uploadLocation" : "uploads/"
+	},
+	"logging" : {
+		"logLocation" : "logs/",
+		"level" : "debug"		
+	},
+	"database" : {
+		"url" : "mongodb://127.0.0.1:27017/me"
+	
+	},
+	"apiKeys" : {
+		"googleApiKey" : "AIzaSyAbClCjtrrSkybBQExMcqPXeojL2mQlkNo"
+	}
+}

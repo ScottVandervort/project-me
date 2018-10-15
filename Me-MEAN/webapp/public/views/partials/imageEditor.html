@@ -1,0 +1,15 @@
+<button ng-show="imgSrc != null" ng-click="cropImage()">{{!cropped ? 'Edit Image' : 'Apply Changes'}}</button>
+<p/>
+<div ng-show="cropped">
+    <label><input type="radio" ng-model="aspectRatio" ng-change="aspectRatioChanged()" value="1.777777">16:9</label>
+    <label><input type="radio" ng-model="aspectRatio" ng-change="aspectRatioChanged()" value="1.333333">4:3</label>
+    <label><input type="radio" ng-model="aspectRatio" ng-change="aspectRatioChanged()" value="1">1:1</label>
+    <label><input type="radio" ng-model="aspectRatio" ng-change="aspectRatioChanged()" value="0.666666">2:3</label>
+    <label><input type="radio" ng-model="aspectRatio" ng-change="aspectRatioChanged()" value="">Free</label>
+    <p/>
+    <label><input type="radio" ng-model="dragMode" ng-change="movementChanged()" value="crop">Drag Crop</label>
+    <label><input type="radio" ng-model="dragMode" ng-change="movementChanged()" value="move">Drag Image</label>
+    <p/>                  
+    <input type="button" ng-click="rotateClockwise()" value="Rotate Clockwise">
+    <input type="button" ng-click="rotateCounterClockwise()" value="Rotate Counter-Clockwise">
+</div>     

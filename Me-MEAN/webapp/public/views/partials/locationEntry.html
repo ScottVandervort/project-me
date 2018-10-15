@@ -1,0 +1,24 @@
+<h2>{{entryData._id?'Update':'Create'}} Location</h2>
+<form name="locationForm" ng-init="init()" ng-submit="submitForm()">
+    <fieldset>    
+        <div ng-include="'views/partials/commonEntry.html'"></div>   
+        <p/>
+        <div style="border: 1px solid black; padding: 10px; width: 700px;">
+        <input name="address" required type="text" placeholder="Address..." ng-model="entryData.address"></input>
+        <span class="error" ng-show="newEntryForm.address.$error.required">Required</span>
+        <p/>        
+        <input name="city" type="text" placeholder="City..." ng-model="entryData.city"></input>
+        <p/>
+        <input name="state" type="text" placeholder="State..." ng-model="entryData.state"></input>
+        <p/>
+        <input name="postalCode" type="text" placeholder="Postal Code..." ng-model="entryData.postalCode"></input>
+        <p/>
+        <input name="country" type="text" placeholder="Country..." ng-model="entryData.country"></input>
+        <p/>        
+        <input readonly name="lat" type="hidden" placeholder="Lattitude..." ng-model="entryData.lat"></input>
+        <input readonly name="lng" type="hidden" placeholder="Longitude..." ng-model="entryData.lng"></input>
+        <p/>
+        <div google-map read-only='false' lat='entryData.lat' lng='entryData.lng' on-location-changed='onLocationChanged(arg)' ></div>                                         
+    </fieldset>
+    <button type="submit">Submit</button>    
+</form>

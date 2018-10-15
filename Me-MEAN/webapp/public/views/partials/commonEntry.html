@@ -1,0 +1,9 @@
+<input name="date" required type="date" placeholder="Date..." ng-model="entryData.date"></input>
+<span class="error" ng-show="$parent.newEntryForm.date.$error.required">Required</span>
+<p/>
+<input name="title" required type="text" placeholder="Title..." ng-model="entryData.title"></input>
+<span class="error" ng-show="$parent.newEntryForm.title.$error.required">Required</span>  
+<p/>
+<textarea name="description" required placeholder="Your thoughts..." ng-model="entryData.description"></textarea>
+<span class="error" ng-show="$parent.newEntryForm.description.$error.required">Required</span>  
+<p/>

@@ -1,0 +1,32 @@
+<div googleMap>
+    <div ng-repeat="entry in entries">
+        <div ng-switch on="entry.type">
+            <div id="{{entry._id}}" ng-switch-when="image">       
+                <p ng-bind="entry.datestamp | date:'MM/dd/yyyy'"/>
+                <p ng-bind="entry.title"/>                
+                <p style="white-space:pre;" ng-bind-html="entry.description | linky:'_blank'"/>
+                <p/>
+                <img ng-src="/images/{{entry.image}}"> 
+                <p/>  
+                <a ng-click="delete(entry._id,entry.type)" href="#/">Delete</a> | <a href="#/update/{{entry.type}}/{{entry._id}}">Edit</a>                               
+            </div>
+            <div id="{{entry._id}}" ng-switch-when="location">                   
+                <p ng-bind="entry.datestamp | date:'MM/dd/yyyy'"/>
+                <p ng-bind="entry.title"/>                
+                <p style="white-space:pre;" ng-bind-html="entry.description | linky:'_blank'"/>
+                <p ng-bind="entry.location.address"/>
+                <p ng-bind="entry.location.city + ',' + entry.location.state + ' ' + entry.location.postalCode"/>
+                <div google-map read-only='true' marker-title='entry.title' lat='entry.location.lat' lng='entry.location.lng'></div>                
+                <p/>  
+                <a ng-click="delete(entry._id,entry.type)" href="#/">Delete</a> | <a href="#/update/{{entry.type}}/{{entry._id}}">Edit</a>                                      
+            </div>                         
+            <div id="{{entry._id}}" ng-switch-default>                         
+                <p ng-bind="entry.datestamp | date:'MM/dd/yyyy'"/>
+                <p ng-bind="entry.title"/>                
+                <p style="white-space:pre;" ng-bind-html="entry.description | linky:'_blank'"/> 
+                <p/>  
+                <a ng-click="delete(entry._id,entry.type)" href="#/">Delete</a> | <a href="#/update/{{entry.type}}/{{entry._id}}">Edit</a>                                       
+            </div>                       
+        </div>
+    </div>
+</div>

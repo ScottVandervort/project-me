@@ -1,0 +1,56 @@
+<h1>Add journal entry</h1>
+<form method="post" action="/journals">
+	<label>Date</label><input type="date" name="date"></input>
+	<br/>
+	<label>Title</label><input name="title"></input>
+	<br/>
+	<label>Description</label><textarea name="description"></textarea>
+	<br/>
+	<input type="submit">
+</form>
+
+<h1>Add images</h1>
+<form method="post" action="/images" enctype="multipart/form-data">
+	<label for="date1">Date 1 </label><input type="date" name="date"></input>
+	<label for="file1">Image 1</label><input type="file" name="file"></input>
+	<label for="title1">Title 1</label><input name="title"></input>		
+	<label for="description1">Description 1</label><textarea name="description"></textarea>
+	<br/>
+	<label for="date2">Date 2 </label><input type="date" name="date"></input>
+	<label for="file2">Image 2</label><input type="file" name="file"></input>
+	<label for="title2">Title 2</label><input name="title"></input>		
+	<label for="description2">Description 2</label><textarea name="description"></textarea>
+	<br/>
+	<label for="date3">Date 3 </label><input type="date" name="date"></input>
+	<label for="file3">Image 3</label><input type="file" name="file"></input>
+	<label for="title3">Title 3</label><input name="title"></input>		
+	<label for="description3">Description 3</label><textarea name="description"></textarea>
+	<br/>
+	<input type="submit">
+</form>
+
+<h1>Add Location</h1>
+<form method="post" action="/locations">
+	<label>Date</label><input type="date" name="date"></input>
+	<br/>
+	<label>Title</label><input name="title"></input>
+	<br/>
+	<label>Description</label><textarea name="description"></textarea>
+	<br/>
+	<label>Address</label><input name="address"></input>
+	<br/>	
+	<label>City</label><input name="city"></input>
+	<br/>		
+	<label>State</label><input name="state"></input>
+	<br/>		
+	<label>Zip</label><input name="zip"></input>
+	<br/>		
+	<input type="submit">
+</form>
+
+<h1>Search</h1>
+<form method="get" action="/search">
+	<input type="submit">
+</form>
+
+

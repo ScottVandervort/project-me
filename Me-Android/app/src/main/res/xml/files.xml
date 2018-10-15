@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Map the root path of my private storage as me_photos. This is used by the File Provider in the Manifest. -->
+<paths>
+    <files-path name="me_photos" path="."/>
+</paths>

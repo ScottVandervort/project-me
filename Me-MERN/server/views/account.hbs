@@ -1,0 +1,15 @@
+<p>{{#each user.photos}}<img src="{{ value }}" alt="Photo of {{ user.displayName }}.">{{/each}}</p>
+<p>ID: {{ user.id }}</p>
+<p>Name: {{ user.displayName }}</p>
+<p>Access Token : {{ accessToken }}</p>
+<p>Refresh Token : {{ refreshToken }} </p>
+<p>Email: {{#each user.emails}} {{ value }} {{/each}}</p>
+
+
+<form method="post" action="/photo/1" enctype="multipart/form-data">
+    <input name="photos" type="file"/>
+    <input name="text" type="text" />
+    <input type="submit"/>
+</form>
+
+<img src="photo/0B3tbkU5kTyM3SjR0ZEw3ZmJwM1E">

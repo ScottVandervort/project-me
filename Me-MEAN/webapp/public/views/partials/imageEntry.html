@@ -1,0 +1,20 @@
+<h2>{{entryData._id?'Update':'Create'}} Image</h2>
+
+<form name="imageForm" ng-init="init()">
+  <fieldset>
+   <div ng-include="'views/partials/commonEntry.html'"></div>   
+    <button ngf-select ng-model="picFile" accept="image/*">Select Image</button>  
+    <img id="image" ngf-src="picFile" />
+    <div image-editor img-id="image" img-src="picFile" on-image-edited='onImageEdited(dataUrl, blob)'>      
+    </div>
+
+    <button ng-show="picFile != null" ng-click="upload()">Submit</button> 
+        
+    <span class="progress" ng-show="progress >= 0">
+      <div style="width:{{progress}}%" ng-bind="progress + '%'"></div>
+    </span>
+    <span ng-show="result">Upload Successful</span>
+    <span class="err" ng-show="errorMsg">{{errorMsg}}</span>    
+    </fieldset>
+
+</form>

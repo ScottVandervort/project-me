@@ -1,0 +1,47 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.cropArea {
+    background: #E4E4E4;
+    overflow: hidden;
+    width:500px;
+    height:350px;
+}
+form .progress {
+    line-height: 15px;
+}
+.progress {
+    display: inline-block;
+    width: 100px;
+    border: 3px groove #CCC;
+}
+.progress div {
+    font-size: smaller;
+    background: orange;
+    width: 0;
+}
+.cropImage {
+    width:400px; 
+    height:400px;
+}
+
+img {
+    max-width:400px; 
+    max-height:400px;    
+}
+
+#map, .map {
+    width:600px;
+    height:400px;
+} 
+
+#autocomplete {
+    width:600px;
+    padding-bottom: -5px;
+}
